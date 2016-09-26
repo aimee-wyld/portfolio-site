@@ -1,0 +1,30 @@
+html {
+	height: 100%;
+	width: 100%;
+}
+
+.content {
+	height: 100%;
+	width: 50%;
+	margin: auto;
+	padding: 1%;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	background-image: url("../images/night-balloon.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	padding: 1.5%;
+}
+
+#home .content {
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	padding: 0;
+}

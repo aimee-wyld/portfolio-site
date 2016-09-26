@@ -1,0 +1,137 @@
+#home main {
+	width: 100%;
+	height: 75%;
+}
+
+#home main img {
+	height: 100%;
+	width: 100%;
+}
+
+.ie #home main {
+	display: block;
+}
+
+.left-box {
+	float: left;
+	height: 26%;
+	margin-top: 2%;
+	margin-right: 2%;
+}
+
+.right-box {
+	float: right;
+	height: 26%;
+	margin-top: 2%;
+}
+
+.about-box {
+	width: 58%;
+	background-color: #ccccff;
+	color: #4d4d4d;
+	overflow: auto;
+	opacity: 0.8;
+	transition: opacity 1s;
+	-moz-box-shadow: 0px 0px 10px #e6f2ff;
+	-webkit-box-shadow: 0px 0px 10px #e6f2ff;
+	box-shadow: 0px 0px 10px #e6f2ff;
+}
+
+.about-box:hover {
+	opacity: 1;
+}
+
+.pic-box {
+	width: 40%;
+}
+
+.pic-box img {
+	height: 100%;
+	width: 100%;
+	-moz-box-shadow: 0px 0px 10px #e6f2ff;
+	-webkit-box-shadow: 0px 0px 10px #e6f2ff;
+	box-shadow: 0px 0px 10px #e6f2ff;
+}
+
+#contact {
+	float: left;
+	height: 24%;
+	width: 100%;
+	background-image: url("../images/orion-moon.jpg");
+	-moz-border-radius: 20px 20px 0 0;
+	-webkit-border-radius: 20px 20px 0 0;
+	border-radius: 20px 20px 0 0;
+	margin-top: 2%;
+	-moz-box-shadow: 0px 0px 10px #e6f2ff;
+	-webkit-box-shadow: 0px 0px 10px #e6f2ff;
+	box-shadow: 0px 0px 10px #e6f2ff;
+}
+
+#contact-form {
+	float: left;
+	height: 57%;
+	width: 100%;
+	background-image: url("../images/catfish.jpeg");
+	background-position: center;
+	-moz-border-radius: 0 0 20px 20px;
+	-webkit-border-radius: 0 0 20px 20px;
+	border-radius: 0 0 20px 20px;
+	overflow: auto;
+	margin-top: 2%;
+	-moz-box-shadow: 0px 0px 10px #e6f2ff;
+	-webkit-box-shadow: 0px 0px 10px #e6f2ff;
+	box-shadow: 0px 0px 10px #e6f2ff;
+}
+
+#portfolio-main {
+	height: 83.5%;
+	float: left;
+	width: 100%;
+	overflow: auto;
+	margin-top: 1.5%;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	-moz-box-shadow: 0px 0px 10px #e6f2ff;
+	-webkit-box-shadow: 0px 0px 10px #e6f2ff;
+	box-shadow: 0px 0px 10px #e6f2ff;
+}
+
+#portfolio-main div {
+	float: left;
+	width: 50%;
+	height: 33%;
+	background-image: url("../images/leafy.jpeg");
+	color: #ffffff;
+	position: relative;
+	border-bottom: 0;
+	font-size: 14px;
+	overflow: auto;
+}
+
+#portfolio-main .col-1 {
+	border-right: 0;
+}
+
+#portfolio-main .alt {
+	border-bottom: 5px ridge #bfbfbf;
+}
+
+.project-info {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	height: 50%;
+}
+
+.ie .project-info {
+	position: static;
+	display: block;
+	margin: 10px auto;
+}
