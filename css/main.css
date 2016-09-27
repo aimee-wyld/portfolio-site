@@ -135,3 +135,21 @@
 	display: block;
 	margin: 10px auto;
 }
+
+.article {
+	height: 63.5%;
+	float: left;
+	width: 100%;
+	overflow: auto;
+	margin-top: 1.5%;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	-moz-box-shadow: 0px 0px 10px #e6f2ff;
+	-webkit-box-shadow: 0px 0px 10px #e6f2ff;
+	box-shadow: 0px 0px 10px #e6f2ff;
+}
+
+.article2 {
+	height: 20%;
+}
