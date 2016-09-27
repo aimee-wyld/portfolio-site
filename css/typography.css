@@ -136,3 +136,13 @@
 #portfolio-main p:hover {
 	opacity: 1;
 }
+
+.blog-titles {
+	display: block;
+	font-size: 17px;
+	color: #4d4d4d;
+	padding: 4%;
+	text-align: left;
+	overflow: auto;
+	margin: 0;
+}
