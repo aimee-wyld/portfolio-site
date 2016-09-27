@@ -41,9 +41,14 @@
             </nav>
             <main id="portfolio-main" class="about-box border">
                 <?php
-                $con = mysqli_connect("192.168.20.56","root","","blog");
+                $con = mysqli_connect("192.168.20.56","root","","my_blog");
                 if (mysqli_connect_errno()) {
-                echo "Failed to connect to MySQL: " . mysqli_connect_error();
+                    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+                }
+                $database = mysqli_query($con, 'SELECT id, name, slug, desc, tags, date_created FROM articles');
+                $returned_database = mysqli_fetch_all($database, MYSQLI_ASSOC);
+                mysqli_close($con);
+                
                 ?>
             </main>
         </div>
