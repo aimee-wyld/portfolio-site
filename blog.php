@@ -39,10 +39,13 @@
                     </div>
                 </a>
             </nav>
-            <main id="portfolio-main" class="about-box border"></main>
+            <main id="portfolio-main" class="about-box border">
+                <?php
+                $con = mysqli_connect("192.168.20.56","root","","blog");
+                if (mysqli_connect_errno()) {
+                echo "Failed to connect to MySQL: " . mysqli_connect_error();
+                ?>
+            </main>
         </div>
     </body>
 </html>
-
-<?php
-?>
