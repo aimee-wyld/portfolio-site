@@ -39,7 +39,7 @@
                     </div>
                 </a>
             </nav>
-            <main id="portfolio-main" class="about-box border">
+            <main id="blog" class="about-box border">
                 <?php
                 $con = mysqli_connect("192.168.20.56","root","","my_blog");
                 if (mysqli_connect_errno()) {
@@ -50,7 +50,11 @@
                 $database = mysqli_fetch_all($result, MYSQLI_ASSOC);
                 mysqli_close($con);
 
-                
+                $i = 0;
+                foreach ($database[$i] as $key => $value) {
+                    echo '<div><h2><a href=article.php/?blog=' . $database[$i]['slug'] . '>' . $database[$i]['name'] . '</a></h2><p>' . $database[$i]['desc'] . '</p><h5>' . $database[$i]['tags'] . '</h5><h5>' . $database[$i]['date_created'] . '</h5></div>';
+                    $i ++;
+                }
                 ?>
             </main>
         </div>
