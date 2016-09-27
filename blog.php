@@ -45,9 +45,11 @@
                 if (mysqli_connect_errno()) {
                     echo "Failed to connect to MySQL: " . mysqli_connect_error();
                 }
-                $database = mysqli_query($con, 'SELECT id, name, slug, desc, tags, date_created FROM articles');
-                $returned_database = mysqli_fetch_all($database, MYSQLI_ASSOC);
+
+                $result = mysqli_query($con, 'SELECT `id`, `name`, `slug`, `desc`, `tags`, `date_created` FROM `articles`;');
+                $database = mysqli_fetch_all($result, MYSQLI_ASSOC);
                 mysqli_close($con);
+
                 
                 ?>
             </main>
