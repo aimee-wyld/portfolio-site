@@ -153,3 +153,24 @@
 .article2 {
 	height: 20%;
 }
+
+#blog {
+	height: 83.5%;
+	float: left;
+	width: 100%;
+	overflow: auto;
+	margin-top: 1.5%;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	-moz-box-shadow: 0px 0px 10px #e6f2ff;
+	-webkit-box-shadow: 0px 0px 10px #e6f2ff;
+	box-shadow: 0px 0px 10px #e6f2ff;
+	border-bottom: 0;
+}
+
+.blog-rows {
+	border-bottom: 5px ridge #bfbfbf;
+	overflow: auto;
+	padding: 2%;
+}
