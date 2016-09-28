@@ -1,3 +1,6 @@
+<?php
+require 'includes/functions.php';
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,10 +17,6 @@
             ?>
             <div class="article about-box border">
                 <?php
-                $con = mysqli_connect("192.168.20.56","root","","my_blog");
-                if (mysqli_connect_errno()) {
-                    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-                }
                 $url = $_GET['blog'];
                 $result = mysqli_query($con, 'SELECT `id`, `name`, `body`, `date_created` FROM `articles` WHERE `slug`="' . $url . '";');
                 $database = mysqli_fetch_all($result, MYSQLI_ASSOC);
