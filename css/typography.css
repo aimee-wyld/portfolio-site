@@ -137,12 +137,18 @@
 	opacity: 1;
 }
 
-.blog-titles {
-	display: block;
-	font-size: 17px;
-	color: #4d4d4d;
-	padding: 4%;
-	text-align: left;
-	overflow: auto;
+.blog-text {
+	float: left;
+	width: 100%;
 	margin: 0;
+	margin-top: 1%;
+}
+
+#blog-desc {
+	padding: 2%;
+	font-size: 15px;
+}
+
+.blog-text a {
+	text-decoration: underline;
 }
