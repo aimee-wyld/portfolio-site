@@ -52,7 +52,7 @@
 
                 $i = 0;
                 foreach ($database[$i] as $key => $value) {
-                    echo '<div><h2><a href=article.php/?blog=' . $database[$i]['slug'] . '>' . $database[$i]['name'] . '</a></h2><p>' . $database[$i]['desc'] . '</p><h5>' . $database[$i]['tags'] . '</h5><h5>' . $database[$i]['date_created'] . '</h5></div>';
+                    echo '<div class="blog-rows"><h2 class="blog-text"><a href=article.php?blog=' . $database[$i]['slug'] . '>' . $database[$i]['name'] . '</a></h2><p id="blog-desc" class="blog-text">' . $database[$i]['desc'] . '<a href=article.php?blog=' . $database[$i]['slug'] . '><i>Read more</i>' . '</a></p><h5 class="blog-text">' . $database[$i]['tags'] . '</h5><h5 class="blog-text">' . $database[$i]['date_created'] . '</h5></div>';
                     $i ++;
                 }
                 ?>
