@@ -1,154 +1,69 @@
 <?php
 switch($selected_page) {
     case 'index':
-        echo '
-<nav>
-    <a href="index.php" class="selected">
-        <div>
-            <h2 class="titles">Home</h2>
-        </div>
-    </a>
-    <a href="project-about-me.php">
-        <div>
-            <h2 class="titles">About</h2>
-        </div>
-    </a>
-    <a href="project-contact.php">
-        <div>
-            <h2 class="titles">Contact</h2>
-        </div>
-    </a>
-    <a href="project-portfolio.php">
-        <div>
-            <h2 class="titles">Portfolio</h2>
-        </div>
-    </a>
-    <a href="blog.php">
-        <div>
-            <h2 class="titles">Blog</h2>
-        </div>
-    </a>
-</nav>';
+        $index = 'class="selected"';
+        $about = '';
+        $contact = '';
+        $portfolio = '';
+        $blog = '';
         break;
     case 'about':
-        echo '
-<nav>
-    <a href="index.php">
-        <div>
-            <h2 class="titles">Home</h2>
-        </div>
-    </a>
-    <a href="project-about-me.php" class="selected">
-        <div>
-            <h2 class="titles">About</h2>
-        </div>
-    </a>
-    <a href="project-contact.php">
-        <div>
-            <h2 class="titles">Contact</h2>
-        </div>
-    </a>
-    <a href="project-portfolio.php">
-        <div>
-            <h2 class="titles">Portfolio</h2>
-        </div>
-    </a>
-    <a href="blog.php">
-        <div>
-            <h2 class="titles">Blog</h2>
-        </div>
-    </a>
-</nav>';
+        $index = '';
+        $about = 'class="selected"';
+        $contact = '';
+        $portfolio = '';
+        $blog = '';
         break;
     case 'contact':
-        echo '
-<nav>
-    <a href="index.php">
-        <div>
-            <h2 class="titles">Home</h2>
-        </div>
-    </a>
-    <a href="project-about-me.php">
-        <div>
-            <h2 class="titles">About</h2>
-        </div>
-    </a>
-    <a href="project-contact.php" class="selected">
-        <div>
-            <h2 class="titles">Contact</h2>
-        </div>
-    </a>
-    <a href="project-portfolio.php">
-        <div>
-            <h2 class="titles">Portfolio</h2>
-        </div>
-    </a>
-    <a href="blog.php">
-        <div>
-            <h2 class="titles">Blog</h2>
-        </div>
-    </a>
-</nav>';
+        $index = '';
+        $about = '';
+        $contact = 'class="selected"';
+        $portfolio = '';
+        $blog = '';
         break;
     case 'portfolio':
-        echo '
-<nav>
-    <a href="index.php">
-        <div>
-            <h2 class="titles">Home</h2>
-        </div>
-    </a>
-    <a href="project-about-me.php">
-        <div>
-            <h2 class="titles">About</h2>
-        </div>
-    </a>
-    <a href="project-contact.php">
-        <div>
-            <h2 class="titles">Contact</h2>
-        </div>
-    </a>
-    <a href="project-portfolio.php" class="selected">
-        <div>
-            <h2 class="titles">Portfolio</h2>
-        </div>
-    </a>
-    <a href="blog.php">
-        <div>
-            <h2 class="titles">Blog</h2>
-        </div>
-    </a>
-</nav>';
+        $index = '';
+        $about = '';
+        $contact = '';
+        $portfolio = 'class="selected"';
+        $blog = '';
         break;
     case 'blog':
-        echo '
-<nav>
-    <a href="index.php">
+        $index = '';
+        $about = '';
+        $contact = '';
+        $portfolio = '';
+        $blog = 'class="selected"';
+        break;
+}
+
+echo
+'<nav>
+    <a href="index.php"' . $index . '>
         <div>
             <h2 class="titles">Home</h2>
         </div>
     </a>
-    <a href="project-about-me.php">
+    <a href="project-about-me.php"' . $about . '>
         <div>
             <h2 class="titles">About</h2>
         </div>
     </a>
-    <a href="project-contact.php">
+    <a href="project-contact.php"' . $contact . '>
         <div>
             <h2 class="titles">Contact</h2>
         </div>
     </a>
-    <a href="project-portfolio.php">
+    <a href="project-portfolio.php"' . $portfolio . '>
         <div>
             <h2 class="titles">Portfolio</h2>
         </div>
     </a>
-    <a href="blog.php" class="selected">
+    <a href="blog.php"' . $blog . '>
         <div>
             <h2 class="titles">Blog</h2>
         </div>
     </a>
 </nav>';
-        break;
-}
+
 ?>
