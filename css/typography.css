@@ -155,6 +155,17 @@
 }
 
 .blog-title {
-	padding: 2%;
-	padding-bottom: 0;
+	padding-left: 2%;
+	float: left;
+	width: 50%;
+}
+
+.blog-link {
+	text-align: right;
+	padding-left: 0;
+	padding-right: 2%;
+}
+
+.underline {
+	text-decoration: underline;
 }
