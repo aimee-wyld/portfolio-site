@@ -170,3 +170,7 @@
 .underline {
 	text-decoration: underline;
 }
+
+.link {
+	font-size: 13px;
+}
