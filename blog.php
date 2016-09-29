@@ -13,13 +13,13 @@ require 'includes/functions.php';
         <div class="content">
             <?php
             $selected_page = 'blog';
-            require 'includes/nav.php'
+            require 'includes/nav.php';
             ?>
             <main id="blog" class="about-box border">
                 <?php
                 $con = database_connect($database);
                 $query_bloglist = 'SELECT `id`, `name`, `slug`, `desc`, `tags`, `date_created` 
-                                   FROM `articles`;';
+                                   FROM `articles`';
                 $bloglist_data = query_into_array($con, $query_bloglist);
                 echo data_iterator($bloglist_data);
                 ?>
