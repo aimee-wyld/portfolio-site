@@ -32,9 +32,9 @@
 	overflow: auto;
 	opacity: 0.8;
 	transition: opacity 1s;
-	-moz-box-shadow: 0px 0px 10px #e6f2ff;
-	-webkit-box-shadow: 0px 0px 10px #e6f2ff;
-	box-shadow: 0px 0px 10px #e6f2ff;
+	-moz-box-shadow: 0 0 10px #e6f2ff;
+	-webkit-box-shadow: 0 0 10px #e6f2ff;
+	box-shadow: 0 0 10px #e6f2ff;
 }
 
 .about-box:hover {
@@ -48,9 +48,9 @@
 .pic-box img {
 	height: 100%;
 	width: 100%;
-	-moz-box-shadow: 0px 0px 10px #e6f2ff;
-	-webkit-box-shadow: 0px 0px 10px #e6f2ff;
-	box-shadow: 0px 0px 10px #e6f2ff;
+	-moz-box-shadow: 0 0 10px #e6f2ff;
+	-webkit-box-shadow: 0 0 10px #e6f2ff;
+	box-shadow: 0 0 10px #e6f2ff;
 }
 
 #contact {
@@ -62,9 +62,9 @@
 	-webkit-border-radius: 20px 20px 0 0;
 	border-radius: 20px 20px 0 0;
 	margin-top: 2%;
-	-moz-box-shadow: 0px 0px 10px #e6f2ff;
-	-webkit-box-shadow: 0px 0px 10px #e6f2ff;
-	box-shadow: 0px 0px 10px #e6f2ff;
+	-moz-box-shadow: 0 0 10px #e6f2ff;
+	-webkit-box-shadow: 0 0 10px #e6f2ff;
+	box-shadow: 0 0 10px #e6f2ff;
 }
 
 #contact-form {
@@ -78,9 +78,9 @@
 	border-radius: 0 0 20px 20px;
 	overflow: auto;
 	margin-top: 2%;
-	-moz-box-shadow: 0px 0px 10px #e6f2ff;
-	-webkit-box-shadow: 0px 0px 10px #e6f2ff;
-	box-shadow: 0px 0px 10px #e6f2ff;
+	-moz-box-shadow: 0 0 10px #e6f2ff;
+	-webkit-box-shadow: 0 0 10px #e6f2ff;
+	box-shadow: 0 0 10px #e6f2ff;
 }
 
 #portfolio-main {
@@ -92,9 +92,9 @@
 	-moz-border-radius: 20px;
 	-webkit-border-radius: 20px;
 	border-radius: 20px;
-	-moz-box-shadow: 0px 0px 10px #e6f2ff;
-	-webkit-box-shadow: 0px 0px 10px #e6f2ff;
-	box-shadow: 0px 0px 10px #e6f2ff;
+	-moz-box-shadow: 0 0 10px #e6f2ff;
+	-webkit-box-shadow: 0 0 10px #e6f2ff;
+	box-shadow: 0 0 10px #e6f2ff;
 }
 
 #portfolio-main div {
@@ -144,9 +144,9 @@
 	-moz-border-radius: 20px 20px 0 0;
 	-webkit-border-radius: 20px 20px 0 0;
 	border-radius: 20px 20px 0 0;
-	-moz-box-shadow: 0px 0px 10px #e6f2ff;
-	-webkit-box-shadow: 0px 0px 10px #e6f2ff;
-	box-shadow: 0px 0px 10px #e6f2ff;
+	-moz-box-shadow: 0 0 10px #e6f2ff;
+	-webkit-box-shadow: 0 0 10px #e6f2ff;
+	box-shadow: 0 0 10px #e6f2ff;
 	margin-top: 2%;
 }
 
@@ -166,9 +166,9 @@
 	-moz-border-radius: 20px;
 	-webkit-border-radius: 20px;
 	border-radius: 20px;
-	-moz-box-shadow: 0px 0px 10px #e6f2ff;
-	-webkit-box-shadow: 0px 0px 10px #e6f2ff;
-	box-shadow: 0px 0px 10px #e6f2ff;
+	-moz-box-shadow: 0 0 10px #e6f2ff;
+	-webkit-box-shadow: 0 0 10px #e6f2ff;
+	box-shadow: 0 0 10px #e6f2ff;
 }
 
 .blog-rows {
