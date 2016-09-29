@@ -10,7 +10,7 @@
 	<div class="content">
 		<?php
 		$selected_page = 'contact';
-		require 'includes/nav.php'
+		require 'includes/nav.php';
 		?>
 		<div id="contact" class="background border">
 			<h5>Email Address: <a href="mailto:aimee.eloise@mail.com">aimee.eloise@mail.com</a></h5>
