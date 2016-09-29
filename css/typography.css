@@ -147,6 +147,7 @@
 #blog-desc {
 	padding: 2%;
 	font-size: 15px;
+	padding-right: 0;
 }
 
 .blog-text a {
