@@ -2,8 +2,8 @@
 require('../functions.php');
 class StackTest extends PHPUNIT_Framework_Testcase {
 
-    /** tests the function by passing in an array within an array with the correct keys and comparing output with expected output
-     *
+    /**
+     * tests the function by passing in an array within an array with the correct keys and comparing output with expected output
      */
     public function test_data_iterator_good() {
         $array = [
@@ -32,8 +32,8 @@ class StackTest extends PHPUNIT_Framework_Testcase {
                                     '</div>');
 }
 
-    /** tests the function by passing in an empty array and comparing output with expected output
-     *
+    /**
+     * tests the function by passing in an empty array and comparing output with expected output
      */
     public function test_data_iterator_bad() {
         $array = [];
@@ -41,12 +41,13 @@ class StackTest extends PHPUNIT_Framework_Testcase {
         $this->assertEquals($data, '');
     }
 
-    /** tests the function by passing something in other than an array and comparing the exception
-     * @expectedException EXCEPTION gives an exception if the input is not an array
+    /**
+     * tests the function by passing something in other than an array and comparing the output
      */
     public function test_data_iterator_malformed() {
         $string = 'blablooo';
-        data_iterator($string);
+        $output = data_iterator($string);
+        $this->assertEquals($output, 'Input is not an array');
     }
 }
 ?>
