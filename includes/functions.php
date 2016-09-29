@@ -15,7 +15,7 @@ return $con;
 $database = 'my_blog';
 
 /** queries the database, returns the data in an associative array and severs connection
- * @param $connection OBJECT represents the connection to the MySQL server (returned from database_connect function)
+ * @param $connection MYSQLI represents the connection to the MySQL server (returned from database_connect function)
  * @param $query STRING should be formatted as a SELECT query with required parameters and the table name
  * @return ARRAY returns an associative array containing associative arrays for each row that is returned from the chosen query parameters
  */
@@ -23,6 +23,20 @@ function query_into_array($connection, $query) {
     $result = mysqli_query($connection, $query);
     $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
     mysqli_close($connection);
+    return $data;
+}
+
+/** iterates over an array within an array and, as long as the key 'name' (which is a value in the first array) isn't empty, then it compound assigns the chosen information from the array, along with some html, into the variable 'data' to be returned.
+ * @param $data_array ARRAY array produced by query_into_array function
+ * @return STRING string containing values from array concatenated with html
+ */
+function data_iterator($data_array) {
+    $data = '';
+    foreach ($data_array as $key => $value) {
+        if (!empty($value['name'])) {
+            $data .= '<div class="blog-rows"><h3 class="blog-text"><a href=article.php?blog=' . $value['slug'] . '>' . $value['name'] . '</a></h3><p id="blog-desc" class="blog-text">' . $value['desc'] . '<a href=article.php?blog=' . $value['slug'] . '><i>Read more</i>' . '</a></p><h5 class="blog-text">' . $value['tags'] . '</h5><h5 class="blog-text">' . $value['date_created'] . '</h5></div>';
+        }
+    }
     return $data;
 }
 ?>
