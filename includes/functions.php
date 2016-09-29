@@ -5,11 +5,11 @@
  * @return MYSQLI represents the connection to the MySQL server
  */
 function database_connect($database_name) {
-$con = mysqli_connect("192.168.20.56","root","","$database_name");
-if (mysqli_connect_errno()) {
-echo "Failed to connect to MySQL: " . mysqli_connect_error();
-}
-return $con;
+    $con = mysqli_connect("192.168.20.56","root","","$database_name");
+        if (mysqli_connect_errno()) {
+        echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        }
+    return $con;
 }
 
 $database = 'my_blog';
@@ -29,15 +29,20 @@ function query_into_array($connection, $query) {
 /** iterates over an array within an array and, as long as the key 'name' (which is a value in the first array) isn't empty, then it compound assigns the chosen information from the array, along with some html, into the variable 'data' to be returned.
  * @param $data_array ARRAY array produced by query_into_array function
  * @return STRING string containing values from array concatenated with html
+ * * @throws EXCEPTION if $data_array is not an array, throws exception.
  */
 function data_iterator($data_array) {
-    $data = '';
-    foreach ($data_array as $key => $value) {
-        if (!empty($value['name'])) {
-            $data .= '<div class="blog-rows"><h3 class="blog-text"><a href=article.php?blog=' . $value['slug'] . '>' . $value['name'] . '</a></h3><p id="blog-desc" class="blog-text">' . $value['desc'] . '<a href=article.php?blog=' . $value['slug'] . '><i>Read more</i>' . '</a></p><h5 class="blog-text">' . $value['tags'] . '</h5><h5 class="blog-text">' . $value['date_created'] . '</h5></div>';
+    if (!is_array($data_array)) {
+        throw new Exception('Input is not an array');
+    } else {
+        $data = '';
+        foreach ($data_array as $key => $value) {
+            if (!empty($value['name'])) {
+                $data .= '<div class="blog-rows"><h3 class="blog-text"><a href=article.php?blog=' . $value['slug'] . '>' . $value['name'] . '</a></h3><p id="blog-desc" class="blog-text">' . $value['desc'] . '<a href=article.php?blog=' . $value['slug'] . '><i>Read more</i>' . '</a></p><h5 class="blog-text">' . $value['tags'] . '</h5><h5 class="blog-text">' . $value['date_created'] . '</h5></div>';
+            }
         }
+        return $data;
     }
-    return $data;
 }
 ?>
 
