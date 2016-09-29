@@ -30,7 +30,7 @@ require 'includes/functions.php';
                 ?>
             </div>
             <div class="article article2 about-box border">
-                <h3 class="blog-text blog-title">Most Recent Blogs:</h3>
+                <h4 class="blog-text blog-title">Most Recent Blogs:</h4>
                 <h3 class="blog-text blog-title blog-link"><a href="blog.php"><i>Back to blog list</i></a></h3>
                 <?php
                 $con = database_connect($database);
