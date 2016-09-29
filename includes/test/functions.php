@@ -11,10 +11,11 @@ public function test_data_iterator_good() {
     data_iterator($array);
 }
 
-//public function test_data_iterator_bad() {
-//
-//}
-//
+public function test_data_iterator_bad() {
+    $array = [];
+    data_iterator($array);
+}
+
 //public function test_data_iterator_malformed() {
 //
 //}
