@@ -175,6 +175,7 @@
 	border-bottom: 5px ridge #bfbfbf;
 	overflow: auto;
 	padding: 2%;
+	width: 100%;
 }
 
 .blog-rows:last-child {
