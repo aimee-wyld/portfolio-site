@@ -21,7 +21,7 @@
 		</main>
 		<?php
 		$selected_page = 'index';
-		require 'includes/nav.php'
+		require 'includes/nav.php';
 		?>
 	</div>
 </body>
