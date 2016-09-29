@@ -2,6 +2,9 @@
 require('../functions.php');
 class StackTest extends PHPUNIT_Framework_Testcase {
 
+    /** tests the function by passing in an array within an array with the correct keys and comparing output with expected output
+     *
+     */
     public function test_data_iterator_good() {
         $array = [
             ['slug' => 'bla-bla', 'name' => 'bloo-blaa', 'desc' => 'blaa-bloo', 'tags' => '(bla) (blo)', 'date_created' => '5th June'],
@@ -29,14 +32,17 @@ class StackTest extends PHPUNIT_Framework_Testcase {
                                     '</div>');
 }
 
+    /** tests the function by passing in an empty array and comparing output with expected output
+     *
+     */
     public function test_data_iterator_bad() {
         $array = [];
         $data = data_iterator($array);
         $this->assertEquals($data, '');
     }
 
-    /**
-     * @expectedException Exception
+    /** tests the function by passing something in other than an array and comparing the exception
+     * @expectedException EXCEPTION gives an exception if the input is not an array
      */
     public function test_data_iterator_malformed() {
         $string = 'blablooo';
