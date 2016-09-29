@@ -13,14 +13,14 @@ require 'includes/functions.php';
         <div class="content">
             <?php
             $selected_page = 'blog';
-            require 'includes/nav.php'
+            require 'includes/nav.php';
             ?>
             <div class="article about-box border">
                 <?php
                 $con = database_connect($database);
                 $query_blog_article = 'SELECT `id`, `name`, `body`, `date_created` 
                                        FROM `articles` 
-                                       WHERE `slug`="' . $_GET['blog'] . '";';
+                                       WHERE `slug`="' . $_GET['blog'] . '"';
                 $article_data = query_into_array($con, $query_blog_article);
                 echo '<div class="blog-rows">' .
                             '<h2 class="blog-text underline">' . $article_data[0]['name'] . '</h2>' .
@@ -37,7 +37,7 @@ require 'includes/functions.php';
                 $query_blog_recent = 'SELECT `id`, `name`, `slug`, `desc`, `tags`, `date_created` 
                                       FROM `articles` 
                                       ORDER BY `date_created` 
-                                      DESC LIMIT 3;';
+                                      DESC LIMIT 3';
                 $recent_data = query_into_array($con, $query_blog_recent);
                 echo data_iterator($recent_data);
                 ?>
