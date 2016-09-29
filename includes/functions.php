@@ -40,7 +40,7 @@ function data_iterator($data_array) {
             if (!empty($value['name'])) {
                 $data .= '<div class="blog-rows">' .
                                 '<h3 class="blog-text"><a href=article.php?blog=' . $value['slug'] . '>' . $value['name'] . '</a></h3>' .
-                                '<p id="blog-desc" class="blog-text">' . $value['desc'] . '<a href=article.php?blog=' . $value['slug'] . '><i>Read more</i>' . '</a></p>' .
+                                '<p id="blog-desc" class="blog-text">' . $value['desc'] . '<a class="link" href=article.php?blog=' . $value['slug'] . '><i>Read more</i>' . '</a></p>' .
                                 '<h5 class="blog-text">' . $value['tags'] . '</h5>' .
                                 '<h5 class="blog-text">' . $value['date_created'] . '</h5>' .
                           '</div>';
