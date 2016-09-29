@@ -6,13 +6,13 @@
  */
 function database_connect($database_name) {
     $con = mysqli_connect("192.168.20.56","root","","$database_name");
-        if (mysqli_connect_errno()) {
+    if (mysqli_connect_errno()) {
         echo "Failed to connect to MySQL: " . mysqli_connect_error();
         }
     return $con;
 }
 
-$database = 'my_blog';
+$database = 'aimee';
 
 /** queries the database, returns the data in an associative array and severs connection
  * @param $connection MYSQLI represents the connection to the MySQL server (returned from database_connect function)
@@ -38,7 +38,12 @@ function data_iterator($data_array) {
         $data = '';
         foreach ($data_array as $key => $value) {
             if (!empty($value['name'])) {
-                $data .= '<div class="blog-rows"><h3 class="blog-text"><a href=article.php?blog=' . $value['slug'] . '>' . $value['name'] . '</a></h3><p id="blog-desc" class="blog-text">' . $value['desc'] . '<a href=article.php?blog=' . $value['slug'] . '><i>Read more</i>' . '</a></p><h5 class="blog-text">' . $value['tags'] . '</h5><h5 class="blog-text">' . $value['date_created'] . '</h5></div>';
+                $data .= '<div class="blog-rows">' .
+                                '<h3 class="blog-text"><a href=article.php?blog=' . $value['slug'] . '>' . $value['name'] . '</a></h3>' .
+                                '<p id="blog-desc" class="blog-text">' . $value['desc'] . '<a href=article.php?blog=' . $value['slug'] . '><i>Read more</i>' . '</a></p>' .
+                                '<h5 class="blog-text">' . $value['tags'] . '</h5>' .
+                                '<h5 class="blog-text">' . $value['date_created'] . '</h5>' .
+                          '</div>';
             }
         }
         return $data;
