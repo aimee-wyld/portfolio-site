@@ -1,6 +1,6 @@
 <?php
-
-/** connects to the chosen database and returns the connection to be used in queries
+/**
+ *connects to the chosen database and returns the connection to be used in queries
  * @param $database_name STRING name of the database to which you want to connect
  * @return MYSQLI represents the connection to the MySQL server
  */
@@ -14,7 +14,8 @@ function database_connect($database_name) {
 
 $database = 'aimee';
 
-/** queries the database, returns the data in an associative array and severs connection
+/**
+ * queries the database, returns the data in an associative array and severs connection
  * @param $connection MYSQLI represents the connection to the MySQL server (returned from database_connect function)
  * @param $query STRING should be formatted as a SELECT query with required parameters and the table name
  * @return ARRAY returns an associative array containing associative arrays for each row that is returned from the chosen query parameters
@@ -25,15 +26,14 @@ function query_into_array($connection, $query) {
     mysqli_close($connection);
     return $data;
 }
-
-/** iterates over an array within an array and, as long as the key 'name' (which is a value in the first array) isn't empty, then it compound assigns the chosen information from the array, along with some html, into the variable 'data' to be returned.
+/**
+ * iterates over an array within an array and, as long as the key 'name' (which is a value in the first array) isn't empty, then it compound assigns the chosen information from the array, along with some html, into the variable 'data' to be returned.
  * @param $data_array ARRAY array produced by query_into_array function
- * @return STRING string containing values from array concatenated with html
- * * @throws EXCEPTION if $data_array is not an array, throws exception.
+ * @return STRING string containing values from array concatenated with html (or if not an array to begin with, returns error message
  */
 function data_iterator($data_array) {
     if (!is_array($data_array)) {
-        throw new Exception('Input is not an array');
+        return 'Input is not an array';
     } else {
         $data = '';
         foreach ($data_array as $key => $value) {
