@@ -10,10 +10,10 @@
 	<div class="content">
 		<?php
 		$selected_page = 'about';
-		require 'includes/nav.php'
+		require 'includes/nav.php';
 		?>
 		<div class="about-box left-box border corner1">
-			<p>Hi! I'm Aim&eacute;e! I have recently moved to Bristol and am currently a student/trainee at <a href="http://www.maydenacademy.co.uk/"><em>Mayden Academy</em></a>, an intense software development training programme based in Bath, and am very excited to be learning HTML, CSS, PHP, SQL and Javascript in the hope of pursuing a career in software development. Prior to this, I lived in Cornwall, working in payroll and administration and performing proofreading/translation tasks online. Alongside my university study, I used to tutor languages and mathematics and also worked in a kitchen, making pizzas.</p>
+			<p>Hi! I'm Aim&eacute;e! I have recently moved to Bristol and am currently a student/trainee at <a href="http://www.maydenacademy.co.uk/"><em>Mayden Academy</em></a>, an intensive software development training programme based in Bath, and am very excited to be learning HTML, CSS, PHP, SQL and Javascript in the hope of pursuing a career in software development. Prior to this, I lived in Cornwall, working in payroll and administration and performing proofreading/translation tasks online. Alongside my university study, I used to tutor languages and mathematics and also worked in a kitchen, making pizzas.</p>
 		</div>
 		<div class="pic-box right-box">
 			<img src="images/rain.jpg" alt="rain" class="corner2 border">
