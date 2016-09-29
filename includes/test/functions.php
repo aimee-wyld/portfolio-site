@@ -1,5 +1,5 @@
 <?php
-require('../functions.php');
+require '../functions.php';
 class StackTest extends PHPUNIT_Framework_Testcase {
 
     /**
