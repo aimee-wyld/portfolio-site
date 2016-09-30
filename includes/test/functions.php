@@ -38,8 +38,7 @@ class StackTest extends PHPUNIT_Framework_Testcase {
      */
     public function test_database_connect() {
         $this->markTestSkipped(
-            'The MySQLI extension is not available.'
-            //Requires database connection so cannot be unit tested.
+            'Requires database connection so cannot be unit tested.'
         );
     }
 
@@ -48,8 +47,7 @@ class StackTest extends PHPUNIT_Framework_Testcase {
      */
     public function test_query_into_array() {
         $this->markTestSkipped(
-            'The MySQLI extension is not available.'
-            //Requires database connection so cannot be unit tested.
+            'Requires database connection so cannot be unit tested.'
         );
     }
 }
