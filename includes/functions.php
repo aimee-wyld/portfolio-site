@@ -5,9 +5,9 @@
  * @return MYSQLI represents the connection to the MySQL server
  */
 function database_connect($database_name) {
-    $con = mysqli_connect("192.168.20.56","root","","$database_name");
+    $con = mysqli_connect('192.168.20.56','root','',$database_name);
     if (mysqli_connect_errno()) {
-        echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        echo 'Failed to connect to MySQL: ' . mysqli_connect_error();
         }
     return $con;
 }
