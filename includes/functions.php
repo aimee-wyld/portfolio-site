@@ -1,6 +1,7 @@
 <?php
 /**
- * connects to the chosen database and returns the connection to be used in queries
+ * connects to the chosen database and returns the connection to be used in queries.
+ * (Requires database connection so cannot be unit tested)
  * @param $database_name STRING name of the database to which you want to connect
  * @return MYSQLI represents the connection to the MySQL server
  */
@@ -16,7 +17,8 @@ function database_connect($database_name) {
 $database = 'aimee';
 
 /**
- * queries the database, returns the data in an associative array and severs connection
+ * queries the database, returns the data in an associative array and severs connection.
+ * (Requires database connection so cannot be unit tested)
  * @param $connection MYSQLI represents the connection to the MySQL server (returned from database_connect function)
  * @param $query STRING should be formatted as a SELECT query with required parameters and the table name
  * @return ARRAY returns an indexed array containing associative arrays for each row that is returned from the chosen query parameters
@@ -40,12 +42,7 @@ function data_iterator($data_array) {
         $data = '';
         foreach ($data_array as $key => $value) {
             if (!empty($value['name'])) {
-                $data .= '<div class="blog-rows">
-                                <h3 class="blog-text"><a href="article.php?blog=' . $value['slug'] . '">' . $value['name'] . '</a></h3>
-                                <p id="blog-desc" class="blog-text">' . $value['desc'] . '<a class="link" href=article.php?blog=' . $value['slug'] . '><i>Read more</i></a></p>
-                                <h5 class="blog-text">' . $value['tags'] . '</h5>
-                                <h5 class="blog-text">' . $value['date_created'] . '</h5>
-                          </div>';
+                $data .= '<div class="blog-rows"><h3 class="blog-text"><a href="article.php?blog=' . $value['slug'] . '">' . $value['name'] . '</a></h3><p id="blog-desc" class="blog-text">' . $value['desc'] . '<a class="link" href="article.php?blog=' . $value['slug'] . '"><i>Read more</i></a></p><h5 class="blog-text">' . $value['tags'] . '</h5><h5 class="blog-text">' . $value['date_created'] . '</h5></div>';
             }
         }
         return $data;
