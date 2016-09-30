@@ -15,7 +15,7 @@
 	<div class="content">
 		<?php
 		$selected_page = 'portfolio';
-		require 'includes/nav.php';
+		require 'includes/nav.php'
 		?>
 		<main id="portfolio-main">
 			<div class="border background col-1 corner1">
