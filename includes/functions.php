@@ -1,6 +1,6 @@
 <?php
 /**
- *connects to the chosen database and returns the connection to be used in queries
+ * connects to the chosen database and returns the connection to be used in queries
  * @param $database_name STRING name of the database to which you want to connect
  * @return MYSQLI represents the connection to the MySQL server
  */
@@ -12,6 +12,7 @@ function database_connect($database_name) {
     return $con;
 }
 
+//assigns the name of my database to a variable to be used for connections.
 $database = 'aimee';
 
 /**
@@ -27,9 +28,10 @@ function query_into_array($connection, $query) {
     return $data;
 }
 /**
- * iterates over an array within an array and, as long as the key 'name' (which is a value in the first array) isn't empty, then it compound assigns the chosen information from the array, along with some html, into the variable 'data' to be returned.
+ * iterates over an array within an array and, as long as the key 'name' (which is a value in the first array) isn't empty, compound assigns the chosen information from the array,
+ * along with some html, into the variable 'data' to be returned.
  * @param $data_array ARRAY array produced by query_into_array function
- * @return STRING string containing values from array concatenated with html (or if not an array to begin with, returns error message
+ * @return STRING string containing values from array concatenated with html (or, if not an array to begin with, returns error message)
  */
 function data_iterator($data_array) {
     if (!is_array($data_array)) {
