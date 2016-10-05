@@ -17,13 +17,13 @@ require 'includes/functions.php';
             ?>
             <div class="article about-box border">
                 <?php
-                //uses function to connect to the specified database and assigns connection information to a variable.
-                $con = database_connect($database);
+                //connects to the specified database and assigns connection information to a variable.
+                $con = new PDO("mysql:host=192.168.20.56; dbname=aimee","root","");
 
                 //assigns query for a specific article to a variable.
-                $query_blog_article = 'SELECT `id`, `name`, `body`, `date_created` 
+                $query_blog_article = 'SELECT `name`, `body`, `date_created` 
                                        FROM `articles` 
-                                       WHERE `slug`="' . $_GET['blog'] . '"';
+                                       WHERE `slug`="' . $_GET['blog'] . '";';
 
                 //uses function to perform query on database and return the data as an array.
                 $article_data = query_into_array($con, $query_blog_article);
@@ -40,14 +40,14 @@ require 'includes/functions.php';
                 <h4 class="blog-text blog-title">Most Recent Blogs:</h4>
                 <h3 class="blog-text blog-title blog-link"><a href="blog.php"><i>Back to blog list</i></a></h3>
                 <?php
-                //uses function to connect to the specified database and assigns connection information to a variable.
-                $con = database_connect($database);
+                //connects to the specified database and assigns connection information to a variable.
+                $con = new PDO("mysql:host=192.168.20.56; dbname=aimee","root","");
 
                 //assigns query for three most recent articles to a variable.
-                $query_blog_recent = 'SELECT `id`, `name`, `slug`, `desc`, `tags`, `date_created` 
+                $query_blog_recent = 'SELECT `name`, `slug`, `desc`, `tags`, `date_created` 
                                       FROM `articles` 
                                       ORDER BY `date_created` 
-                                      DESC LIMIT 3';
+                                      DESC LIMIT 3;';
 
                 //uses function to perform query on database and return the data as an array.
                 $recent_data = query_into_array($con, $query_blog_recent);

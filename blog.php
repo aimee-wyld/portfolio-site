@@ -17,12 +17,12 @@ require 'includes/functions.php';
             ?>
             <main id="blog" class="about-box border">
                 <?php
-                //uses function to connect to the specified database and assigns connection information to a variable.
-                $con = database_connect($database);
+                //connects to the specified database and assigns connection information to a variable.
+                $con = new PDO("mysql:host=192.168.20.56; dbname=aimee","root","");
 
                 //assigns a query for the overall blog list to a variable.
-                $query_bloglist = 'SELECT `id`, `name`, `slug`, `desc`, `tags`, `date_created` 
-                                   FROM `articles`';
+                $query_bloglist = 'SELECT `name`, `slug`, `desc`, `tags`, `date_created` 
+                                   FROM `articles`;';
 
                 //uses function to perform query on database and return the data as an array.
                 $bloglist_data = query_into_array($con, $query_bloglist);

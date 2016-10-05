@@ -36,15 +36,6 @@ class StackTest extends PHPUNIT_Framework_Testcase {
     /**
      * will mark as skipped because function cannot be unit tested
      */
-    public function test_database_connect() {
-        $this->markTestSkipped(
-            'Requires database connection so cannot be unit tested.'
-        );
-    }
-
-    /**
-     * will mark as skipped because function cannot be unit tested
-     */
     public function test_query_into_array() {
         $this->markTestSkipped(
             'Requires database connection so cannot be unit tested.'
