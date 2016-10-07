@@ -5,18 +5,28 @@
  * (Requires database connection so cannot be unit tested)
  * @param $connection PDO represents the connection to the MySQL server (returned from database_connect function)
  * @param $query STRING should be formatted as a SELECT query with required parameters and the table name
- * @return ARRAY returns an indexed array containing associative arrays for each row that is returned from the chosen query parameters
+ * @param $placeholder STRING uses an optional placeholder to pass in the URL string for article page query in order to
+ * prevent SQL injection
+ * @return ARRAY returns an indexed array containing associative arrays for each row that is returned from the chosen
+ * query parameters
  */
-function query_into_array($connection, $query) {
-    $result = $connection->query($query);
+function query_into_array($connection, $query, $placeholder = null) {
+    if ($placeholder===null) {
+        $result = $connection->query($query);
+    } else {
+        $result = $connection->prepare($query);
+        $result->execute([$placeholder]);
+    }
     $data = $result->fetchAll(PDO::FETCH_ASSOC);
     return $data;
 }
 /**
- * iterates over an array within an array and, as long as the key 'name' (which is a value in the first array) isn't empty, compound assigns the chosen information from the array,
+ * iterates over an array within an array and, as long as the key 'name' (which is a value in the first array) isn't
+ * empty, compound assigns the chosen information from the array,
  * along with some html, into the variable 'data' to be returned.
  * @param $data_array ARRAY array produced by query_into_array function
- * @return STRING string containing values from array concatenated with html (or, if not an array to begin with, returns error message)
+ * @return STRING string containing values from array concatenated with html (or, if not an array to begin with, returns
+ * error message)
  */
 function data_iterator($data_array) {
     if (!is_array($data_array)) {
