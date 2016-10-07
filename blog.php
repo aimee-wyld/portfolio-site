@@ -21,7 +21,7 @@ require 'includes/functions.php';
                 $con = new PDO("mysql:host=192.168.20.56; dbname=aimee","root","");
 
                 //assigns a query for the overall blog list to a variable.
-                $query_bloglist = 'SELECT `name`, `slug`, `desc`, `tags`, `date_created` 
+                $query_bloglist = 'SELECT `name`, `slug`, `desc`, `tags`, DATE(`date_created`) AS `date_created` 
                                    FROM `articles`;';
 
                 //uses function to perform query on database and return the data as an array.
