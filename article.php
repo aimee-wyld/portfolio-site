@@ -21,14 +21,15 @@ require 'includes/functions.php';
                 $con = new PDO("mysql:host=192.168.20.56; dbname=aimee","root","");
 
                 //assigns query for a specific article to a variable.
-                $query_blog_article = 'SELECT `name`, `body`, `date_created` 
+                $query_blog_article = 'SELECT `name`, `body`, DATE(`date_created`) AS `date_created` 
                                        FROM `articles` 
-                                       WHERE `slug`="' . $_GET['blog'] . '";';
+                                       WHERE `slug`=?;';
 
                 //uses function to perform query on database and return the data as an array.
-                $article_data = query_into_array($con, $query_blog_article);
+                $article_data = query_into_array($con, $query_blog_article, $_GET['blog']);
 
-                //echoes out specified information from array concatenated with html - only one row in array so no need for a function.
+                //echoes out specified information from array concatenated with html - only one row in array so no need
+                // for a function.
                 echo '<div class="blog-rows">
                             <h2 class="blog-text underline">' . $article_data[0]['name'] . '</h2>
                             <h5 class="blog-text">' . $article_data[0]['date_created'] . '</h5>
@@ -44,7 +45,7 @@ require 'includes/functions.php';
                 $con = new PDO("mysql:host=192.168.20.56; dbname=aimee","root","");
 
                 //assigns query for three most recent articles to a variable.
-                $query_blog_recent = 'SELECT `name`, `slug`, `desc`, `tags`, `date_created` 
+                $query_blog_recent = 'SELECT `name`, `slug`, `desc`, `tags`, DATE(`date_created`) AS `date_created` 
                                       FROM `articles` 
                                       ORDER BY `date_created` 
                                       DESC LIMIT 3;';
