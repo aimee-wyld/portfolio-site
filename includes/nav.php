@@ -38,7 +38,8 @@ switch($selected_page) {
         break;
 }
 
-//echoes out different versions of the nav bar with either the "selected" class or an empty string to change format page by page
+//echoes out different versions of the nav bar with either the "selected" class or an empty string to change format page
+// by page
 echo
 '<nav>
     <a href="index.php"' . $index . '>
