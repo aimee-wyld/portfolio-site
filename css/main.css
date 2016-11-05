@@ -93,59 +93,6 @@
 	box-shadow: 0 0 10px #e6f2ff;
 }
 
-#portfolio-main {
-	height: 83.5%;
-	float: left;
-	width: 100%;
-	overflow: auto;
-	margin-top: 1.5%;
-	-moz-border-radius: 20px;
-	-webkit-border-radius: 20px;
-	border-radius: 20px;
-	-moz-box-shadow: 0 0 10px #e6f2ff;
-	-webkit-box-shadow: 0 0 10px #e6f2ff;
-	box-shadow: 0 0 10px #e6f2ff;
-}
-
-#portfolio-main div {
-	float: left;
-	width: 50%;
-	height: 33%;
-	background-image: url("../images/leafy.jpeg");
-	color: #ffffff;
-	position: relative;
-	border-bottom: 0;
-	font-size: 14px;
-	overflow: auto;
-}
-
-#portfolio-main .col-1 {
-	border-right: 0;
-}
-
-#portfolio-main .alt {
-	border-bottom: 5px ridge #bfbfbf;
-}
-
-.project-info {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-moz-transform: translate(-50%, -50%);
-	-webkit-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	border-radius: 10px;
-	height: 70%;
-}
-
-.ie .project-info {
-	position: static;
-	display: block;
-	margin: 10px auto;
-}
-
 .article {
 	height: 57%;
 	float: left;
