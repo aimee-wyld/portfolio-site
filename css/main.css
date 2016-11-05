@@ -67,6 +67,16 @@
 	box-shadow: 0 0 10px #e6f2ff;
 }
 
+#contact-form img {
+	width: 10%;
+	float: right;
+	margin-right: 2%;
+	margin-top: 2%;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
 #contact-form {
 	float: left;
 	height: 57%;
