@@ -4,17 +4,15 @@ var $rightArrow
 var $portfolioContent
 
 function init() {
-    $leftArrow = $("#left-arrow")
-    $rightArrow = $("#right-arrow")
-    $leftArrow.css("visibility", "visible")
-    $rightArrow.css("visibility", "visible")
+    $leftArrow.css("display", "block")
+    $rightArrow.css("display", "block")
     $portfolioContent = $("#portfolio-content")
 
     if (page == 1) {
-        $leftArrow.css("visibility", "hidden")
+        $leftArrow.css("display", "none")
     }
     if (page == 3) {
-        $rightArrow.css("visibility", "hidden")
+        $rightArrow.css("display", "none")
     }
 }
 
@@ -23,15 +21,18 @@ function load() {
 }
 
 $(function() {
-    document.getElementById("right-arrow").onclick = function() {
+    $leftArrow = $("#left-arrow")
+    $rightArrow = $("#right-arrow")
+
+    $rightArrow.click(function() {
         page ++
         init()
         load()
-    }
+    })
 
-    document.getElementById("left-arrow").onclick = function() {
+    $leftArrow.click(function() {
         page --
         init()
         load()
-    }
+    })
 })
