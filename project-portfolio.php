@@ -5,6 +5,8 @@
 	<?php
 	require 'includes/links.php';
 	?>
+	<script src="js/jquery.js"></script>
+	<script src="js/portfolio.js"></script>
 </head>
 <body>
 	<img class="arrow" src="images/arrowright.png" alt="arrow">
