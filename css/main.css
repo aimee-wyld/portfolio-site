@@ -93,6 +93,20 @@
 	box-shadow: 0 0 10px #e6f2ff;
 }
 
+.arrow {
+    position: absolute;
+    width: 3%;
+    top: 54%;
+    right: 22%;
+    opacity: 0.6;
+    transition: 1s;
+}
+
+.arrow:hover {
+    opacity: 1;
+}
+
+
 .article {
 	height: 57%;
 	float: left;
