@@ -7,6 +7,7 @@
 	?>
 </head>
 <body>
+	<img class="arrow" src="images/arrowright.png" alt="arrow">
 	<div class="content">
 		<?php
 		$selected_page = 'portfolio';
@@ -27,7 +28,7 @@
 				for my website, using PHP and SQL. The brief was to create a blog page on our sites showing links to all
 				the articles, create an article page with a friendly URL structure and show the 3 latest blog posts
 				somewhere on our site. Our PHP had to be functional and unit tested, and we also had to
-				use git to branch off of our previous master version of the site and commit changes. After
+				use git to branch off of our previous master version of the site and commit changes.<br>After
 				creating pull requests, we code reviewed other members of the group. I chose to use a MySQL
 				database to enable me to easily create new blog entries and efficiently query the data in PHP. I
 				really enjoyed getting to put what we had learnt of PHP basics into practice and combining it with
@@ -49,7 +50,7 @@
 				possible. Each fence had to start and end with a post and contain at least 1 railing. When
 				calculating the amount of posts and railings needed to cover a certain length fence, the result
 				had to span at least the length required, no less, and the fence length results had to be displayed
-				in metres with no more than 2 decimal places. It also had to be unit tested and use functions. This
+				in metres with no more than 2 decimal places. It also had to be unit tested and use functions.<br>This
 				was a great challenge and really helped me to feel confident using functions in PHP. I created two
 				separate functions (one to calculate the fence length if provided with number of posts and railings,
 				and one to calculate the number of posts/railings when provided with the fence length) and a simple
