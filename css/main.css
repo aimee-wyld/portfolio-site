@@ -93,6 +93,10 @@
 	box-shadow: 0 0 10px #e6f2ff;
 }
 
+#portfolio-content {
+    height: 100%;
+}
+
 .arrow {
     position: absolute;
     width: 3%;
