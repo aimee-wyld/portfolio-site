@@ -101,9 +101,17 @@
     position: absolute;
     width: 3%;
     top: 54%;
-    right: 22%;
     opacity: 0.6;
     transition: 1s;
+}
+
+#right-arrow {
+    right: 22%;
+}
+
+#left-arrow {
+    left: 22%;
+    visibility: hidden;
 }
 
 .arrow:hover {

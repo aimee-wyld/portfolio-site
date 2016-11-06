@@ -14,10 +14,11 @@
 		$selected_page = 'portfolio';
 		require 'includes/nav.php';
 		?>
+		<img class="arrow" id="right-arrow" src="images/arrowright.png" alt="arrow">
+		<img class="arrow" id="left-arrow" src="images/arrowleft.png" alt="arrow">
 		<div id="portfolio-content">
-			<img class="arrow" src="images/arrowright.png" alt="arrow">
 			<div class="pic-box left-box border corner1">
-				<img src="images/portfolio_site.png" alt="portfolio-site" class="corner1">
+				<a href="index.php"><img src="images/portfolio-pics/portfolio_site.png" alt="portfolio-site" class="corner1"></a>
 			</div>
 			<div class="about-box right-box corner2 border">
 				<p><strong>HTML/CSS - Portfolio Site</strong><br><br>For my first project at Mayden Academy, I created this
@@ -39,10 +40,10 @@
 					git and working well as a scrum team, by keeping up with code reviews for each person/story.</p>
 			</div>
 			<div class="pic-box right-box border">
-				<img src="images/blog.png" alt="blog-page">
+				<a href="blog.php"><img src="images/portfolio-pics/blog.png" alt="blog-page"></a>
 			</div>
 			<div class="pic-box left-box corner3 border">
-				<img src="images/fence_Calc.png" alt="fence-calculator" class="corner3">
+				<a href="external-projects/fence/fence_input.php"><img src="images/portfolio-pics/fence_calc.png" alt="fence-calculator" class="corner3"></a>
 			</div>
 			<div class="about-box right-box border corner4">
 				<p><strong>PHP - Fence Calculator</strong><br><br>As an additional challenge during our PHP basics module,
