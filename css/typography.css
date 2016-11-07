@@ -106,33 +106,40 @@
 	background-color: #ccccff;
 }
 
-#portfolio-main div h3 {
-	text-decoration: underline;
-	text-align: center;
-	margin-top: 5px;
-	height: 20%;
-	margin-bottom: 0;
-	font-size: 19px;
-	color: #262626;
-}
-
-#portfolio-main p {
-	text-align: center;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	border-radius: 10px;
+.blog-text {
+	float: left;
+	width: 100%;
 	margin: 0;
-	font-size: 16px;
-	color: #4d4d4d;
-	background-color: #ccccff;
-	width: 90%;
-	height: 70%;
-	overflow: auto;
-	opacity: 0.8;
-	transition: opacity 1s;
-	padding: 6px;
+	margin-top: 1%;
 }
 
-#portfolio-main p:hover {
-	opacity: 1;
+#blog-desc {
+	padding: 2%;
+	font-size: 15px;
+	padding-right: 0;
+}
+
+.blog-text a {
+	text-decoration: underline;
+}
+
+.blog-title {
+	padding-left: 2%;
+	float: left;
+	width: 50%;
+}
+
+.blog-link {
+	text-align: right;
+	padding-left: 0;
+	padding-right: 2%;
+	font-size: 15px;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+.link {
+	font-size: 13px;
 }

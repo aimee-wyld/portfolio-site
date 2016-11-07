@@ -2,49 +2,24 @@
 <html>
 <head>
 	<title>A Wyld | Contact</title>
-	<link rel="stylesheet" type="text/css" href="css/global.css">
-	<link rel="stylesheet" type="text/css" href="css/grid.css">
-	<link rel="stylesheet" type="text/css" href="css/nav.css">
-	<link rel="stylesheet" type="text/css" href="css/typography.css">
-	<link rel="stylesheet" type="text/css" href="css/header.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="icon" href="images/favicon.jpg" type="image/jpg" sizes="16x16">
+	<?php
+	require 'includes/links.php';
+	?>
 </head>
 <body>
 	<div class="content">
-		<nav>
-			<a href="index.html">
-				<div>
-					<h2 class="titles">Home</h2>
-				</div>
-			</a>
-			<a href="project-about-me.html">
-				<div>
-					<h2 class="titles">About</h2>
-				</div>	
-			</a>
-			<a href="project-contact.html" class="selected">
-				<div>
-					<h2 class="titles">Contact</h2>
-				</div>
-			</a>
-			<a href="project-portfolio.html">
-				<div>
-					<h2 class="titles">Portfolio</h2>
-				</div>
-			</a>
-			<a href="#">
-				<div>
-					<h2 class="titles">Blog</h2>
-				</div>
-			</a>
-		</nav>
+		<?php
+		$selected_page = 'contact';
+		require 'includes/nav.php';
+		?>
 		<div id="contact" class="background border">
 			<h5>Email Address: <a href="mailto:aimee.eloise@mail.com">aimee.eloise@mail.com</a></h5>
 			<h5 id="address">Location: Bristol/Bath</h5>
 			<h5 id="tel">Tel: <a href="tel:07825301256">07825301256</a></h5>
 		</div>
 		<div id="contact-form" class="background border">
+			<a href="http://www.github.com/aimee-wyld"><img src="images/github.png" alt="github"></a>
+			<a href="http://uk.linkedin.com/in/aimée-wyld-946811130"><img src="images/linkedin.png" alt="linked-in"></a>
 			<form>
 				<h6>Your Name</h6>
 				<input type="text" name="name" placeholder="Jeff Jefferson" class="input">

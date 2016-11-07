@@ -32,9 +32,9 @@
 	overflow: auto;
 	opacity: 0.8;
 	transition: opacity 1s;
-	-moz-box-shadow: 0px 0px 10px #e6f2ff;
-	-webkit-box-shadow: 0px 0px 10px #e6f2ff;
-	box-shadow: 0px 0px 10px #e6f2ff;
+	-moz-box-shadow: 0 0 10px #e6f2ff;
+	-webkit-box-shadow: 0 0 10px #e6f2ff;
+	box-shadow: 0 0 10px #e6f2ff;
 }
 
 .about-box:hover {
@@ -48,9 +48,9 @@
 .pic-box img {
 	height: 100%;
 	width: 100%;
-	-moz-box-shadow: 0px 0px 10px #e6f2ff;
-	-webkit-box-shadow: 0px 0px 10px #e6f2ff;
-	box-shadow: 0px 0px 10px #e6f2ff;
+	-moz-box-shadow: 0 0 10px #e6f2ff;
+	-webkit-box-shadow: 0 0 10px #e6f2ff;
+	box-shadow: 0 0 10px #e6f2ff;
 }
 
 #contact {
@@ -62,9 +62,19 @@
 	-webkit-border-radius: 20px 20px 0 0;
 	border-radius: 20px 20px 0 0;
 	margin-top: 2%;
-	-moz-box-shadow: 0px 0px 10px #e6f2ff;
-	-webkit-box-shadow: 0px 0px 10px #e6f2ff;
-	box-shadow: 0px 0px 10px #e6f2ff;
+	-moz-box-shadow: 0 0 10px #e6f2ff;
+	-webkit-box-shadow: 0 0 10px #e6f2ff;
+	box-shadow: 0 0 10px #e6f2ff;
+}
+
+#contact-form img {
+	width: 10%;
+	float: right;
+	margin-right: 2%;
+	margin-top: 2%;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
 }
 
 #contact-form {
@@ -78,12 +88,59 @@
 	border-radius: 0 0 20px 20px;
 	overflow: auto;
 	margin-top: 2%;
-	-moz-box-shadow: 0px 0px 10px #e6f2ff;
-	-webkit-box-shadow: 0px 0px 10px #e6f2ff;
-	box-shadow: 0px 0px 10px #e6f2ff;
+	-moz-box-shadow: 0 0 10px #e6f2ff;
+	-webkit-box-shadow: 0 0 10px #e6f2ff;
+	box-shadow: 0 0 10px #e6f2ff;
 }
 
-#portfolio-main {
+#portfolio-content {
+    height: 100%;
+}
+
+.arrow {
+    position: absolute;
+    width: 3%;
+    top: 54%;
+    opacity: 0.6;
+    transition: 1s;
+}
+
+#right-arrow {
+    right: 22%;
+}
+
+#left-arrow {
+    left: 22%;
+    display: none;
+}
+
+.arrow:hover {
+    opacity: 1;
+}
+
+
+.article {
+	height: 57%;
+	float: left;
+	width: 100%;
+	overflow: auto;
+	-moz-border-radius: 20px 20px 0 0;
+	-webkit-border-radius: 20px 20px 0 0;
+	border-radius: 20px 20px 0 0;
+	-moz-box-shadow: 0 0 10px #e6f2ff;
+	-webkit-box-shadow: 0 0 10px #e6f2ff;
+	box-shadow: 0 0 10px #e6f2ff;
+	margin-top: 2%;
+}
+
+.article2 {
+	height: 24%;
+	-moz-border-radius: 0 0 20px 20px;
+	-webkit-border-radius: 0 0 20px 20px;
+	border-radius: 0 0 20px 20px;
+}
+
+#blog {
 	height: 83.5%;
 	float: left;
 	width: 100%;
@@ -92,46 +149,18 @@
 	-moz-border-radius: 20px;
 	-webkit-border-radius: 20px;
 	border-radius: 20px;
-	-moz-box-shadow: 0px 0px 10px #e6f2ff;
-	-webkit-box-shadow: 0px 0px 10px #e6f2ff;
-	box-shadow: 0px 0px 10px #e6f2ff;
+	-moz-box-shadow: 0 0 10px #e6f2ff;
+	-webkit-box-shadow: 0 0 10px #e6f2ff;
+	box-shadow: 0 0 10px #e6f2ff;
 }
 
-#portfolio-main div {
-	float: left;
-	width: 50%;
-	height: 33%;
-	background-image: url("../images/leafy.jpeg");
-	color: #ffffff;
-	position: relative;
-	border-bottom: 0;
-	font-size: 14px;
-	overflow: auto;
-}
-
-#portfolio-main .col-1 {
-	border-right: 0;
-}
-
-#portfolio-main .alt {
+.blog-rows {
 	border-bottom: 5px ridge #bfbfbf;
+	overflow: auto;
+	padding: 2%;
+	width: 100%;
 }
 
-.project-info {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-moz-transform: translate(-50%, -50%);
-	-webkit-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	border-radius: 10px;
-	height: 50%;
-}
-
-.ie .project-info {
-	position: static;
-	display: block;
-	margin: 10px auto;
+.blog-rows:last-child {
+	border-bottom: 0;
 }
