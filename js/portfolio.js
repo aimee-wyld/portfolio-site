@@ -1,4 +1,5 @@
 var page = 1
+var totalPages = 3
 var $leftArrow
 var $rightArrow
 var $portfolioContent
@@ -11,7 +12,7 @@ function init() {
     if (page == 1) {
         $leftArrow.css("display", "none")
     }
-    if (page == 3) {
+    if (page == totalPages) {
         $rightArrow.css("display", "none")
     }
 }
