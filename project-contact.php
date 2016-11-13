@@ -5,6 +5,8 @@
 	<?php
 	require 'includes/links.php';
 	?>
+    <script src="js/jquery.js"></script>
+    <script src="js/contact.js"></script>
 </head>
 <body>
 	<div class="content">
@@ -41,7 +43,7 @@
 				<input type="number" name="antispam" placeholder="Complete the number series" step="10" class="input">
 				<!--<![endif]-->
 				<h6>Your Message</h6>
-				<textarea name="message" rows="1" cols="24" class="input">Your message here...</textarea><br>
+				<textarea name="message" rows="1" cols="24" class="input"></textarea><br>
 				<input type="submit" value="Send Message" class="button">
 			</form>
 		</div>
