@@ -11,6 +11,12 @@
 		<?php
 		$selected_page = 'contact';
 		require 'includes/nav.php';
+
+        $to = 'aimee.eloise@mail.com';
+        $subject = $_POST['name'] . ': ' . $_POST['text'];
+        $message = $_POST['message'];
+        $headers = 'From: ' . $_POST['email'] . "\r\n";
+        mail($to, $subject, $message, $headers);
 		?>
 		<div id="contact" class="background border">
 			<h5>Email Address: <a href="mailto:aimee.eloise@mail.com">aimee.eloise@mail.com</a></h5>
@@ -20,7 +26,7 @@
 		<div id="contact-form" class="background border">
 			<a href="http://www.github.com/aimee-wyld"><img src="images/github.png" alt="github"></a>
 			<a href="http://uk.linkedin.com/in/aimée-wyld-946811130"><img src="images/linkedin.png" alt="linked-in"></a>
-			<form>
+			<form action="project-contact.php" method="post">
 				<h6>Your Name</h6>
 				<input type="text" name="name" placeholder="Jeff Jefferson" class="input">
 				<h6> Your Email</h6>
