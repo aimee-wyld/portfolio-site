@@ -55,3 +55,7 @@ a {
 .border {
 	border: 5px ridge #bfbfbf;
 }
+
+.error {
+	border: 1px solid #ff0000;
+}
