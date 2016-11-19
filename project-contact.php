@@ -26,8 +26,8 @@
 			<h5 id="tel">Tel: <a href="tel:07825301256">07825301256</a></h5>
 		</div>
 		<div id="contact-form" class="background border">
-			<a href="http://www.github.com/aimee-wyld"><img src="images/github.png" alt="github"></a>
-			<a href="http://uk.linkedin.com/in/aimée-wyld-946811130"><img src="images/linkedin.png" alt="linked-in"></a>
+			<a class="contact-icons" href="http://www.github.com/aimee-wyld"><img src="images/github.png" alt="github"></a>
+			<a class="contact-icons" href="http://uk.linkedin.com/in/aimée-wyld-946811130"><img src="images/linkedin.png" alt="linked-in"></a>
 			<form action="project-contact.php" method="post">
 				<h6>Your Name</h6>
 				<input id="field1" type="text" name="name" placeholder="Jeff Jefferson" class="input">

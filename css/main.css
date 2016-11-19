@@ -93,6 +93,14 @@
 	box-shadow: 0 0 10px #e6f2ff;
 }
 
+.contact-icons {
+	opacity: 0.8;
+}
+
+.contact-icons:hover {
+	opacity: 1;
+}
+
 #portfolio-content {
     height: 100%;
 }
